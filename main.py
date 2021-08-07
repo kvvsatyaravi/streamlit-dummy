@@ -6,6 +6,8 @@ import json
 import torch
 from backend.nltk_utils import bag_of_words, tokenize, stem
 from backend.Model import NeuralNet
+from backend.train import trained
+import os
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -61,6 +63,13 @@ form = st.form(key='my-form')
 name = form.text_input('Enter input')
 submit = form.form_submit_button('Submit')
 
-if submit:
+if name == '/train':
+    os.system('python backend/train.py')
+    st.write(trained())
+    
+    st.write("trained data successful")
+elif submit:
 	st.write("User: "+ name)
 	st.write("Dummy: "+ chat())
+else:
+    st.write("there is some error in your code")
