@@ -112,6 +112,18 @@
       "responses":[
       	"cricket,football,basketball"
       ]
+    },
+   {
+      "tag": "purpose",
+      "patterns": [
+      	"What dummybot can do",
+      	"For what purpose your created",
+        "What can you do"
+      ],
+      "responses":[
+      	"I am here for practise of chatbot how bot can used in real world",
+        "I am basic level chatbot i am created to know more about nlp by practising"
+      ]
     }
   ]
 }
